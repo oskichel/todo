@@ -1,0 +1,91 @@
+.wrapper {
+    width: 560px;
+    height: 30px;
+    padding: 5px 0;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.remove {
+    width: 40px;
+    height: 30px;
+    border: none;
+    background: url('../icons/remove.svg');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.data {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.title {
+    padding: 0 5px;
+    font-size: 18px;
+    margin: auto 0;
+    line-height: 50px;
+}
+
+.complete {
+    margin-left: 10px;
+}
+
+.favorite {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url('../icons/add-to-fav.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.unfavorite {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url('../icons/fav.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*.checkbox {
+    opacity: 0;
+}
+
+.favcheckbox {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: inline-block;
+    background-image: url('../icons/add-to-fav.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.favcheckbox::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: inline-block;
+    background-image: url('../icons/fav.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox:checked + .favcheckbox::before {
+    opacity: 1;
+}*/
