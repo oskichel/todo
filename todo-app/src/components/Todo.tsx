@@ -2,13 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import {ITodo} from '../types/data';
 import {TodoList} from './TodoList/TodoList';
 import st from './App.module.css';
-import { useContext } from "react";
-import { TodoContext } from "../context";
 
 const Todo: React.FC = () => {
     const [value, setValue] = useState('');
     const [todos, setTodos] = useState<ITodo[]>([]);
-    const {isFav, setIsFav} = useContext(TodoContext);
 
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -41,10 +38,11 @@ const Todo: React.FC = () => {
             if (todo.id !== id) return todo;
             return {
                 ...todo,
-                complete: !todo.complete
+                complete: !todo.complete,
             }
         }))
     }
+
 
     const addToFavorites = (id: number): void => {
         setTodos(todos.map(todo => {
@@ -55,8 +53,7 @@ const Todo: React.FC = () => {
                 ...todo,
                 favorite: !todo.favorite,
             }
-        }, setIsFav(true)
-        ))
+        }))
         
     }
 
@@ -66,6 +63,8 @@ const Todo: React.FC = () => {
         }
         
     }, []);
+
+
 
 
     

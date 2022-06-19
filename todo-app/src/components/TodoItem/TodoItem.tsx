@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { TodoContext } from '../../context';
+import { addListener } from 'process';
+import { useEffect } from 'react';
 import {ITodo} from '../../types/data';
 import st from './TodoItem.module.css';
 
@@ -11,16 +11,25 @@ interface ITodoItem extends ITodo {
 
 const TodoItem: React.FC<ITodoItem> = (props) => {
     const {id, title, complete, favorite, toggleTodo, removeTodo, addToFavorites} = props;
-    const {isFav, setIsFav} = useContext(TodoContext);
+    
 
+    useEffect(() => {
+        if (complete) {
+
+        }
+    }, [])
 
 
     return <div className={st.wrapper}>
         <div className={st.data}>
-            <input className={st.complete}
-                type='checkbox' 
-                checked={complete} 
-                onChange={() => toggleTodo(id)} />
+            <label className={st.comlabel}>
+                <input className={st.cominput} type='checkbox' checked={complete} onChange={() => toggleTodo(id)}/>
+                <span className={st.comspan}></span>
+            </label>
+            <label className={st.favlabel}>
+                <input className={st.favinput} type='checkbox' checked={favorite} onChange={() => addToFavorites(id)}/>
+                <span className={st.favspan}></span>
+            </label>
             <div className={st.title}>{title}</div>
         </div>
         <button className={st.remove} onClick={() => removeTodo(id)}></button>

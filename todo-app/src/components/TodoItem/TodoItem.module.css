@@ -24,6 +24,7 @@
     display: flex;
     justify-content: baseline;
     align-items: center;
+    padding-left: 5px;
 }
 
 .title {
@@ -37,55 +38,93 @@
     margin-left: 10px;
 }
 
-.favorite {
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    border: none;
-    background: url('../icons/add-to-fav.svg');
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
+.favlabel {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 29px;
 }
 
-.unfavorite {
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    border: none;
-    background: url('../icons/fav.svg');
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/*.checkbox {
+.favinput {
+    position: absolute;
     opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.favcheckbox {
+.favspan {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 30px;
     height: 30px;
-    padding: 0;
-    display: inline-block;
+    content: '';
     background-image: url('../icons/add-to-fav.svg');
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.favcheckbox::before {
+.favspan::after {
     content: '';
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
     width: 30px;
     height: 30px;
-    padding: 0;
-    display: inline-block;
     background-image: url('../icons/fav.svg');
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.checkbox:checked + .favcheckbox::before {
-    opacity: 1;
-}*/
+.favinput:checked + .favspan::after {
+    display: block;
+}
+
+.comlabel {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 29px;
+}
+
+.cominput {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.comspan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.comspan::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../icons/check.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+    transform-origin: center center
+}
+
+.cominput:checked + .comspan::after {
+    display: block;
+}
+
+.line {
+    text-decoration: line-through;
+}
