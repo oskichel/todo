@@ -2,7 +2,7 @@
 ## Live Demo: https://oskichel.github.io/todo/
 
 ## Стек:
-React, TypeScript
+React, TypeScript.
 
 ## Описание:
 Что сделано:
