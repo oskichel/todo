@@ -40,3 +40,18 @@
 .h1 {
     text-align: center;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .input {
+        width: 72vw;
+    }
+
+    .button {
+        width: 15vw;
+    }
+}

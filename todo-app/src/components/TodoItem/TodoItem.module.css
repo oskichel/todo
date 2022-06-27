@@ -125,6 +125,8 @@
     display: block;
 }
 
-.line {
-    text-decoration: line-through;
+@media (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        width: 88.5vw;
+    }
 }
